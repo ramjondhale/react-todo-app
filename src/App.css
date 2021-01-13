@@ -1,38 +1,122 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 50px;
+  font-family: "Lora", serif;
+  background: -webkit-linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+.todo_container {
+  background-image: linear-gradient(135deg, #fdeb71 10%, #f8d800 100%);
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
+  padding: 20px;
+  min-height: 50vh;
+  width: 80%;
+  min-width: 250px;
+  max-width: 600px;
+  box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.5);
   align-items: center;
+  justify-content: flex-start;
+}
+
+form {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todo_list {
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+ul {
+  padding: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo {
+  display: flex;
+  color: #fff;
+  font-size: 25px;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.actions {
+  display: flex;
+}
+
+#todo_input {
+  width: 70%;
+  height: 40px;
+  font-size: 25px;
+  margin-right: 15px;
+  border: 3px solid #43cbff;
+  outline: none;
+  border-radius: 5px;
+}
+
+#todo_input:focus {
+  outline: none;
+  border: 3px solid #9708cc;
+  border-radius: 10px;
+}
+
+button {
+  padding: 0;
+  border: none;
+  display: flex;
+  background: none;
+}
+
+button:focus {
+  outline: none;
+}
+button.add {
+  color: #3f51b5;
+  font-size: 40px;
+}
+button.add:hover {
+  font-size: 45px;
+}
+button.completed {
+  color: #57ec25;
+  font-size: 30px;
+}
+button.completed:hover {
+  font-size: 35px;
+}
+
+button.delete {
+  color: #d32f2f;
+  font-size: 30px;
+}
+button.delete:hover {
+  font-size: 35px;
+}
+
+.todo_item {
+  list-style: none;
 }
